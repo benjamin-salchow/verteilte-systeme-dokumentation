@@ -24,20 +24,24 @@ Hierzu kann man direkt innerhalb der installierten VM folgenden Befehl ausführe
 
 ```sh
 # auschecken der Beispiele mit GIT
-git clone <TODO>
+git clone https://github.com/benjamin-salchow/verteilte-systeme-projekte.git
 ```
 
-Nachdem dieser Befehl ausgeführt wurde, ist nun ein neuer Ordner im Dateisystem entstanden.
+[- Link zum Repository ->](https://github.com/benjamin-salchow/verteilte-systeme-projekte)
+
+Nachdem dieser Befehl ausgeführt wurde, ist nun ein neuer Ordner mit dem Namen `verteilte-systeme-projekte` im Dateisystem entstanden.
 
 In diesem Verzeichnis sind alle Beispielprojekte enthalten mit dem dazugehörigen Quelltext. Diese können in ein eigenes Repository kopiert oder direkt im Verzeichnis verwendet werden.
 
 ## Erklärung der Projekte
 
-Die Beispielprojekte sind in dem ausgecheckten Ordner: `TODO`.
+Die Beispielprojekte sind in dem ausgecheckten Ordner: `verteilte-systeme-projekte`.
 
 Eine Auflistung aller Projekte und die dazugehörige Dokumentation kann man unter folgendem Link aufrufen:
 
-`TODO LINK`
+[- Link zur Übersicht aller Projekte ->](https://github.com/benjamin-salchow/verteilte-systeme-projekte/blob/master/README.md)
+
+**Hinweis:** Detaillierte Erklärung des Projekts befindet sich im Projektordner und im Sourcecode als Kommentare.
 
 ## Starten des Projekts
 

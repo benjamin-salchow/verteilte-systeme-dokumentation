@@ -57,10 +57,11 @@ Ubuntu benutzt hierfür zwei Installationsbefehle:
 
 ```sh
 # Installation aller notwendigen Pakete
-apt install -y docker-compose nodejs git curl wget 
+apt install -y docker-compose nodejs git curl wget vim
 
 # Installation von Java (optional)
-apt install -y openjdk-13-jdk openjdk-13-jre
+apt install -y openjdk-11-jdk openjdk-11-jre mvn gradle
+# Info: Java 13 wird von Spring Boot noch nicht voll unterstützt
 
 # Installation von Eclipse (optional)
 snap install --classic eclipse

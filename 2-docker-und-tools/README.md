@@ -70,6 +70,22 @@ snap install --classic eclipse
 snap install --classic code
 ```
 
+### Installation von Erweiterungen in VScode
+
+Folgende Erweiterungen werden für die Entwicklung empfohlen:
+
+ * Java Integration
+   * Language Support for Java(TM) by Red Hat
+   * https://marketplace.visualstudio.com/items?itemName=redhat.java
+ * Docker Integration
+   * Docker
+   * https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+ * Python Integration
+   * Python
+   * https://marketplace.visualstudio.com/items?itemName=ms-python.python
+
+Node.js wird automatisch von VScode direkt unterstützt und benötigt keine Erweiterung.
+
 ## Start des Container-Dienstes
 
 In diesem Kapitel wird der Container-Dienst `Docker` gestarted und so konfiguriert, dass dieser Dienst in Zukunft automatisch mit dem System startet.

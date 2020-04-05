@@ -57,7 +57,7 @@ Ubuntu benutzt hierfür zwei Installationsbefehle:
 
 ```sh
 # Installation aller notwendigen Pakete
-apt install -y docker-compose nodejs git curl wget vim
+apt install -y docker-compose nodejs npm git curl wget vim
 
 # Installation von Java (optional)
 apt install -y openjdk-11-jdk openjdk-11-jre mvn gradle
@@ -191,6 +191,14 @@ services:
     volumes:
       - db:/var/lib/mysql
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8085:80
+    environment:
+      PMA_HOST: db
+
 volumes:
   wordpress:
   db:
@@ -216,10 +224,16 @@ docker-compose up
 Nun sollte der Firefox die Installation von Wordpress anzeigen.
 
 Aktuell läuft ein Container, der ein Webserver ist, mit Wordpress und ein Container, der eine Datenbank beinhaltet (mysql), parallel.
+Darüber hinaus wird ein Container mit phpmyadmin gestartet. Dieser Container hostet eine Webseite, mit der die Datenbank angeschaut werden kann.
 
-Der Container kann mit [strg] + [c] beendet werden.
+ 8. Benutze Firefox und gehe auf folgende URL: http://localhost:8085/
 
-Mit dem Befehl `docker-compose down` werden die Container wieder entfernt.
+Anmelden kann man sich mit dem Benutzer: `exampleuser` und dem Passwort: `examplepass`, wie auch im `docker-compose.yml` angegeben.
+Danach sollte man die Datenbanken sowie Tabellen sehen, welche von Wordpress angelegt worden sind.
+
+Die Container können mit [strg] + [c] im Terminal, in dem `docker-compose up` ausgeführt wird, beendet werden.
+
+Mit dem Befehl `docker-compose down` werden die Container-Instanzen von der Festplatte gelöscht.
 
 **Hinweis:** docker-compose muss im Verzeichnis ausgeführt werden, wo sich die `docker-compose.yml` Datei befindet.
 

@@ -57,7 +57,7 @@ Ubuntu benutzt hierfür zwei Installationsbefehle:
 
 ```sh
 # Installation aller notwendigen Pakete
-apt install -y docker-compose nodejs npm git curl wget vim
+apt install -y nodejs npm git curl wget vim apt-transport-https ca-certificates gnupg-agent software-properties-common
 
 # Installation von Java (optional)
 apt install -y openjdk-11-jdk openjdk-11-jre mvn gradle
@@ -68,6 +68,19 @@ snap install --classic eclipse
 
 # Installation von vscode
 snap install --classic code
+
+# Installation von Docker - Seit Ubuntu 20.04 über das Docker Repository
+# Hinzufügen des GPG-Schlüssels für das Docker Repository:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# Hinzufügen des Docker Repositories:
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+# Aktuallisieren des Repositores, damit alle neuen Docker-Pakete gefunden werden:
+apt update
+# Installation der eigentlichen notwendigen Pakete für Docker:
+apt install docker-ce docker-ce-cli containerd.io docker-compose
 ```
 
 ### Installation von Erweiterungen in VScode
@@ -93,16 +106,20 @@ In diesem Kapitel wird der Container-Dienst `Docker` gestarted und so konfigurie
 **Hinweis:** Folgende Schritte müssen nur einmalig durchgeführt werden. Nachdem der Dienst mittels `enable` registriert worden ist, wird dieser automatisch bei dem Systemstart gestartet.
 
 ```sh
-# Start des Docker-Service
+# Start des Docker-Service (und containerd)
 systemctl start docker
+systemctl start containerd
 
-# Docker-Service automatisch mit dem Start des Betriebssystems starten
+# Docker-Service (und containerd) automatisch mit dem Start des Betriebssystems starten
 systemctl enable docker
+systemctl enable containerd
 
 # Docker-Service-Status prüfen
 systemctl status docker
 # Status sollte "active" und "running" sein
 # Zum Beenden [STRG] + [C] drücken
+# Contanerd-Service-Status prüfen
+systemctl start containerd
 ```
 
 ## Zugriff als Nutzer zu Docker

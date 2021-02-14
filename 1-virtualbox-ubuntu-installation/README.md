@@ -13,8 +13,10 @@ Ein weiterer Grund ist, dass Container-Engines wie Docker am besten unter Linux 
 Folgende Pakete müssen heruntergeladen werden:
  * Virtual Box
    * https://www.virtualbox.org/wiki/Downloads
- * Ubuntu Desktop 19.10
-   * https://ubuntu.com/download/desktop/thank-you/?version=19.10&architecture=amd64
+ * Ubuntu neueste Ubuntu Desktop Version (20.04)
+   * https://ubuntu.com/download/desktop
+   * **Hinweis:** Für die Architektur sollte `amd64` verwendet werden.
+   * **Hinweis:** Die folgenden Screenshots sind von Ubuntu 19.10, jedoch ist der Installationsprozess sehr ähnlich.
 
 Danach muss Virtual Box auf dem Computer installiert werden.
 

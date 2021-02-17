@@ -60,7 +60,7 @@ Ubuntu benutzt hierfür zwei Installationsbefehle:
 apt install -y nodejs npm git curl wget vim apt-transport-https ca-certificates gnupg-agent software-properties-common
 
 # Installation von Java (optional)
-apt install -y openjdk-11-jdk openjdk-11-jre mvn gradle
+apt install -y openjdk-11-jdk openjdk-11-jre maven gradle
 # Info: Java 13 wird von Spring Boot noch nicht voll unterstützt
 
 # Installation von Eclipse (optional)

@@ -14,6 +14,14 @@ Auch diese Beschreibung ist öffentlich auf GitHub erreichbar und selbst in eine
  * https://www.atlassian.com/de/git
  * https://guides.github.com/activities/hello-world/
 
+### GitHub Infos
+
+SSH Key erstellen:
+ * https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Erstellten SSH Key in GitHub hinzufügen:
+ * https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+
 ### Auschecken der Projekte
 
 Um die Beispielprojekte zu bekommen, muss das Repository auf den PC geklont werden.

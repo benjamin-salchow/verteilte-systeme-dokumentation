@@ -53,7 +53,7 @@ Ubuntu benutzt hierfür zwei Installationsbefehle:
  * `apt` - Paketmanager, der Systemkomponente, Dienste und CLI-Programme isntalliert
  * `snap` - Alternativer Paketmanager (seit einigen Ubuntu-Versionen) hauptsächlich für grafische Anwendungen, die von Software-Herstellern bereitgestellt werden
 
-**Hinweis:** Die Installation kann einige Zeit in Anspruch nehmen. Java und Eclipse sind optional und müssen nicht auf der VM installiert werden, wenn Java nicht verwendet wird. Eclipse und VScode können auch auf dem Host-System installiert werden.
+**Hinweis:** Die Installation kann einige Zeit in Anspruch nehmen. Java, PHP und Eclipse sind optional und müssen nicht auf der VM installiert werden, wenn Java nicht verwendet wird. Eclipse und VScode können auch auf dem Host-System installiert werden.
 
 ```sh
 # Installation aller notwendigen Pakete
@@ -62,6 +62,9 @@ apt install -y nodejs npm git curl wget vim apt-transport-https ca-certificates 
 # Installation von Java (optional)
 apt install -y openjdk-11-jdk openjdk-11-jre maven gradle
 # Info: Java 13 wird von Spring Boot noch nicht voll unterstützt
+
+# Installation von PHP (optional)
+sudo apt install php-fpm php-mysql
 
 # Installation von Eclipse (optional)
 snap install --classic eclipse
@@ -93,6 +96,13 @@ Folgende Erweiterungen werden für die Entwicklung empfohlen:
  * Docker Integration
    * Docker
    * https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+ * PHP Integration
+   * PHP IntelliSense
+   * https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-intellisense
+   * php cs fixer
+   * https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-intellisense
+   * PHP Debug
+   * https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug
  * Python Integration
    * Python
    * https://marketplace.visualstudio.com/items?itemName=ms-python.python
